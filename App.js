@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Home, OnBoardingScreen, Welcome, Login, Register, OtpVerify } from './screens';
+import { TailwindProvider } from 'tailwindcss-react-native';
+
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <TailwindProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen options={{ headerShown: false }} name="Welcome" component={ Welcome } />
+          <Stack.Screen options={{ headerShown: false }} name="OnBoardingScreen" component={ OnBoardingScreen } />
+          <Stack.Screen options={{ headerShown: false }} name="Login" component={ Login } />
+          <Stack.Screen options={{ headerShown: false }} name="Register" component={ Register } />
+          <Stack.Screen options={{ headerShown: false }} name="OtpVerify" component={ OtpVerify } />
+          <Stack.Screen options={{ headerShown: false }} name="Home" component={ Home } />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </TailwindProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
