@@ -1,6 +1,9 @@
 import { View, Text, SafeAreaView, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+
+const Tab = createMaterialBottomTabNavigator();
 
 const Home = () => {
   return (
@@ -26,6 +29,7 @@ const Home = () => {
         <View>
             
         </View>
+    
     </SafeAreaView>
   )
 }
