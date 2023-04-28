@@ -1,7 +1,8 @@
-import { View, Text, SafeAreaView, TextInput, TouchableOpacity, Image } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, Image } from 'react-native';
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import CheckBox from 'react-native-check-box';
+import { TextInput } from 'react-native-paper';
 
 
 const Login = () => {
@@ -18,8 +19,8 @@ const Login = () => {
             <Text className='pl-10 font-semibold text-2xl'>Welcome Back!</Text>
             <Text className='pl-10 text-[#848181]'>Login to continue</Text>
           </View>
-            <TextInput className='h-12 pl-5 border-2 mt-10 ml-10 mr-10 border-gray-300 rounded-sm' placeholder='User Name'/>
-            <TextInput className='h-12 pl-5 border-2 mt-5 ml-10 mr-10 border-gray-300 rounded-sm' placeholder='Password'/>
+            <TextInput mode='outlined' activeOutlineColor='#00b3ff' className='h-12 pl-5 mt-10 ml-10 mr-10 rounded-sm' label='User Name'/>
+            <TextInput mode='outlined' activeOutlineColor='#00b3ff' className='h-12 pl-5 mt-5 ml-10 mr-10 rounded-sm' label='Password'/>
           <View className='flex-row p-3 mb-0 w-full items-center justify-center'>
             <CheckBox className='pl-5 pr-2' isChecked = {isChecked} onClick={ () => setIsChecked(!isChecked) } checkedCheckBoxColor='#05b3f7'/>
             <Text className='items-center justify-center'>Remember me</Text>

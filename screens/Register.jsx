@@ -1,7 +1,8 @@
-import { View, Text, SafeAreaView, TouchableOpacity, TextInput, Image, ScrollView } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, Image, ScrollView } from 'react-native';
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import CheckBox from 'react-native-check-box';
+import { TextInput } from 'react-native-paper';
 
 const Register = () => {
     const navigation = useNavigation();
@@ -18,12 +19,12 @@ const Register = () => {
             <Text className='pl-10 font-semibold text-2xl'>Sign Up</Text>
             <Text className='pl-10 text-[#848181]'>Create a new account</Text>
           </View>
-            <TextInput className='h-12 pl-5 border-2 mt-10 ml-10 mr-10 border-gray-300 rounded-sm' placeholder='User Name'/>
-            <TextInput className='h-12 pl-5 border-2 mt-5 ml-10 mr-10 border-gray-300 rounded-sm' keyboardType="numeric" placeholder='Age'/>
-            <TextInput className='h-12 pl-5 border-2 mt-5 ml-10 mr-10 border-gray-300 rounded-sm' keyboardType="numeric" placeholder='Mobile No'/>
-            <TextInput className='h-12 pl-5 border-2 mt-5 ml-10 mr-10 border-gray-300 rounded-sm' placeholder='Email ID'/>
-            <TextInput className='h-12 pl-5 border-2 mt-5 ml-10 mr-10 border-gray-300 rounded-sm' placeholder='Password'/>
-            <TextInput className='h-12 pl-5 border-2 mt-5 ml-10 mr-10 border-gray-300 rounded-sm' placeholder='Country'/>
+            <TextInput mode='outlined' activeOutlineColor='#00b3ff' className='h-12 pl-5 mt-5 ml-10 mr-10 rounded-sm' label='User Name'/>
+            <TextInput mode='outlined' activeOutlineColor='#00b3ff' className='h-12 pl-5 mt-5 ml-10 mr-10 rounded-sm' label='Age'/>
+            <TextInput mode='outlined' activeOutlineColor='#00b3ff' className='h-12 pl-5 mt-5 ml-10 mr-10 rounded-sm' label='Mobile Number'/>
+            <TextInput mode='outlined' activeOutlineColor='#00b3ff' className='h-12 pl-5 mt-5 ml-10 mr-10 rounded-sm' label='Email ID'/>
+            <TextInput mode='outlined' activeOutlineColor='#00b3ff' className='h-12 pl-5 mt-5 ml-10 mr-10 rounded-sm' label='Password'/>
+            <TextInput mode='outlined' activeOutlineColor='#00b3ff' className='h-12 pl-5 mt-5 ml-10 mr-10 rounded-sm' label='Country'/>
           <View className='flex-row p-3 mb-0 w-full items-center justify-center'>
             <CheckBox className='pl-5 pr-2' isChecked = {isChecked} onClick={ () => setIsChecked(!isChecked) } checkedCheckBoxColor='#05b3f7' uncheckedCheckBoxColor='grey'/>
             <Text className='items-center justify-center'>I agree all Terms & Conditions</Text>
